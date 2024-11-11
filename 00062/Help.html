@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help</title>
+    <link href="https://fonts.googleapis.com/css2?family=Viner+Hand+ITC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, ul, li, p, a {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			height: 9%;
+			width:100%;
+			background-image: url('./Assignment_files/6.jpeg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			max-width: 100%; /* Image won't exceed its container's width */
+			height: auto;   /* Height auto-adjusts to maintain aspect ratio */
+		}
+
+		nav ul {
+			list-style: none;
+		}
+
+		nav ul li {
+			display: inline;
+			margin-right: 20px;
+		}
+
+		nav a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.content {
+			margin: 40px;
+		}
+
+		.about-section {
+			border: 1px solid #ddd;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+
+		header {
+			font-family: Viner Hand ITC;
+			color: #dba027;
+			font-size:40px;
+			background-color: transparent;
+			position: fixed;
+			z-index: 100;
+			top:0;
+		}
+
+		nav ul {
+			list-style: none;
+			margin-right:0%;
+			margin-top:60%;
+			width:150px;
+			height:40px;
+			display: inline;
+			z-index:1000;
+			padding:5px;
+		}
+
+		nav ul li {
+			display: inline;
+			width:5px;
+			height:5px;
+			font-size:40px;
+		}
+	
+		nav a {
+			color: black;
+			text-decoration: none;
+		}
+		
+		a {
+			color: black;
+			text-decoration: none;
+		}
+	
+		a:active {
+			background-color: transparent;
+		}
+		
+	
+		a:link{
+			color:#2f2f39;
+			text-decoration: none
+		}
+		
+		a:visited{
+			background-color:#e6ad3a;
+		}
+		
+		a:hover{color:black}
+		
+		input:focus{
+			background-color:black;
+		}
+		
+
+		#menu {
+		z-index: 2;
+		}
+
+		#menu-bar {
+		width: 45px;
+		height: 40px;
+		margin: 30px 0 20px 20px;
+		cursor: pointer;
+		}
+
+		.bar {
+		height: 5px;
+		width: 100%;
+		background-color: #da9100;
+		display: block;
+		border-radius: 5px;
+		transition: 0.3s ease;
+		}
+
+		#bar1 {
+		transform: translateY(-4px);
+		}
+
+		#bar3 {
+		transform: translateY(4px);
+		}
+
+		.nav {
+		transition: 0.3s ease;
+		display: none;
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+
+		}
+
+		.nav ul {
+		padding: 0 22px;
+		}
+
+		.nav li {
+		list-style: none;
+		padding: 12px 0;
+		}
+
+		.nav li a {
+		color: rgb(6, 6, 6);
+		font-size: 3;
+		text-decoration:wavy;
+		}
+
+		.nav li a:hover {
+		font-weight: bold;
+		}
+
+		.menu-bg, #menu {
+		top: 0px;
+		left: 0;
+		position: absolute;
+		}
+
+		.menu-bg {
+		z-index: 1;
+		width: 0;
+		height: 0;
+		margin: 30px 0 20px 20px;
+		background: radial-gradient(circle, #e0c977, #da9917);
+		border-radius: 60%;
+		transition: 0.3s ease;
+		}
+
+		.change {
+		display: block;
+		}
+
+		.change .bar {
+		background-color: white;
+		}
+
+		.change #bar1 {
+		transform: translateY(4px) rotateZ(-45deg);
+		}
+
+		.change #bar2 {
+		opacity: 0;
+		}
+
+		.change #bar3 {
+		transform: translateY(-6px) rotateZ(45deg);
+		}
+
+		.change-bg {
+		width: 600px;
+		height: 600px;
+		transform: translate(-60%,-30%);
+		}
+
+        /* Content styles */
+        .content {
+            padding: 20px;
+            margin-top: 240px; /* Adjust based on header height */
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgba(255, 255, 255, 0.9); /* Light background with transparency */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Search input and button styles */
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.custom-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #2980b9;
+}
+
+ /* Footer styles */
+ footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+			bottom:0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: #dba027;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-social a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: #dba027;
+        }
+
+  
+
+
+@media (max-width: 768px) {
+    header {
+        font-size: 30px;
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    .logo img {
+        height: 80px;
+        width: 80px;
+    }
+    
+    nav li {
+        margin-right: 10px;
+    }
+    
+    .content {
+        margin-top: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    .input {
+        font-size: 12px;
+    }
+    
+    .custom-button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+		/* Define the initial state of elements */
+		.fade-in {
+			font-size:25px;
+			font-family: Libre Baskerville;
+			opacity: 100%;
+			transform: translateY(10%);
+			transition: opacity 3s ease, transform 1s ease;
+		}
+
+		/* Define the animation to fade in elements when they become visible */
+		.fade-in.in-viewport {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		/* Default styles for all screen sizes */
+body {
+    font-size: 16px;
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    /* Additional responsive styles for smaller screens */
+}
+
+/* Media query for screens with a minimum width of 1200px */
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+    /* Additional responsive styles for larger screens */
+}
+
+    </style>
+</head>
+
+
+<body>
+    <header>
+
+		<div class="navv" style="background: #333;margin-top:0%;height:140px;width: 100%;position:fixed;left:0;display:flex;padding:10px 15px;"></div>
+	
+		<div>
+		
+        <div style="margin-top: 10px;margin-left:17%;z-index: 1000;position: fixed;text-shadow: 6px 6px 6px rgba(255,0,0,0.5);font-weight:bold;">
+		<h1>Mystical Book Chamber</h1>
+			
+		<img src="./Assignment_files/Logo_new_bg.png" style="height:140px;width:140px;margin-top:-130px;margin-left:73%;z-index:100;position:fixed;">
+		</div>
+		
+		<div style="margin-left:1%;margin-top:50px;position:fixed;">
+		<div id="menu">
+		<div id="menu-bar" onclick="menuOnClick()">
+		<div id="bar1" class="bar"></div>
+		<div id="bar2" class="bar"></div>
+		<div id="bar3" class="bar"></div>
+		</div>
+		
+		<nav class="nav" id="nav">
+		<ul>
+			<li><a href="Main page.html"><ion-icon name="chevron-forward-outline"></ion-icon> Home</a></li>
+			<li><a href="About.html"><ion-icon name="chevron-forward-outline"></ion-icon> About</a></li>
+			<li><a href="Services.html"><ion-icon name="chevron-forward-outline"></ion-icon></i> Services</a></li>
+			<li><a href="Help.html"><ion-icon name="chevron-forward-outline"></ion-icon></i> Help</a></li>
+			</ul>
+		</nav> 
+		</div>
+		
+		<script>
+		function menuOnClick() {
+			document.getElementById("menu-bar").classList.toggle("change");
+			document.getElementById("nav").classList.toggle("change");
+			document.getElementById("menu-bg").classList.toggle("change-bg");
+		}
+		</script>
+
+		<div class="menu-bg" id="menu-bg"></div>
+		</div>
+		</div>
+
+        
+    </header><br><br>
+	<div class="content">
+    <div class="fade-in">
+        <h1>Help Center</h1><br><br><br>
+        <p>Thanks for being a valued member of Free-eBooks. You can download unlimited ebooks and audiobooks as a VIP member! Take advantage of this special offer <a href="https://1q455am7.pages.infusionsoft.net" target="_blank">here</a>.</p>
+        <p>If you want to Unsubscribe or Cancel your membership, go to your Profile page (Top right corner. Click on your name.) the Unsubscribe and Cancel buttons are at the bottom of your Profile page (or <a href="/my-profile#unsubscribe-from-services">click the link</a>).</p>
+        <div class="search-container">
+            <input type="text" class="input" placeholder="TYPE YOUR QUESTION OR PROBLEM" autocomplete="off">
+            <button type="submit" class="custom-button">Go</button>
+        </div>
+    </div></div>
+    
+	<script src="menu.js"></script>
+
+</body>
+</html>
